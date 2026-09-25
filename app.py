@@ -35,6 +35,7 @@ def get_device(name: str):
 
 @app.post("/devices", status_code=201)
 def create_device(device: Device):
+    
     new_device = device.model_dump()
     readings.append(new_device)
     return new_device
